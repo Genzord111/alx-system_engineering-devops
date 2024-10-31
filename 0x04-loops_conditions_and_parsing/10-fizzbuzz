@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Script is an implementation of FizzBuzz for 1 - 100
 for i in {1..100};
 do
 	if ((i%3==0 && i%5==0)); then
