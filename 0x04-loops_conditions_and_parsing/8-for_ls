@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
-for i in `cat | ls .`;
+# displays content of current directory in list format
+for i in `ls | cat`;
 do
 	echo "$i"
 done
