@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+NAME="Best School"
+i=0
+while ((i < 10))
+do
+	echo "$NAME"
+	((i+=1))
+done
