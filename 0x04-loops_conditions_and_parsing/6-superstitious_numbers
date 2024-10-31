@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# script that displays numbers from 1 to 20 and specific text at 4, 9, 17
 i=1
 while ((i < 21));
 do
