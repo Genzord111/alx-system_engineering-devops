@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # displays thePIDs of all bash processes in a custom format
-pids=($(pidof bash))
+read -ra pids <<< "$(pidof bash)"
+
 for ((i=${#pids[@]}-1; i>=0; i-=1));
 do
 	echo "${pids[i]} bash"
