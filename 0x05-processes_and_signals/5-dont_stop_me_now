@@ -2,6 +2,6 @@
 # kills the infinite looping program
 pid=$(pgrep -f "4-to_infinity_and_beyond")
 
-if [[-n $pid]]; then
+if test -n "$pid"; then
   kill -9 4-to_infinity_and_beyond
 fi
