@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+# kills the infinite looping program
+kill -9 4-to_infinity_and_beyond
