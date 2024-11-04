@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# terminates the process using it's PID
+# terminates the process using it's name
 pid=$(pgrep -f "7-highlander")
 
 if test -n "$pid"; then
-    kill -9 "$pid"
+    pkill -f "7-highlander"
 fi
+

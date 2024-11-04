@@ -1,1 +1,7 @@
 #!/usr/bin/env bash
+# terminates the process using it's name and pkill command
+pid=$(pgrep -f "4-to_infinity_and_beyond")
+
+if test -n "$pid"; then
+	pkill -f "4-to_infinity_and_beyond"
+fi

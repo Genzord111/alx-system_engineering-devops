@@ -1,1 +1,15 @@
 #!/usr/bin/env bash
+# displays "To infinity..." indefinitely after 2s and echo's "I am.." when SIGTERM is sent
+
+function sigterm_handler()
+{
+    echo "I am invincible!!!"
+}
+
+trap sigterm_handler SIGTERM
+
+while(true);
+do
+        echo "To infinity and beyond"
+        sleep 2
+done
