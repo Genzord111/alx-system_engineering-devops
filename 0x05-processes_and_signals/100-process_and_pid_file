@@ -6,8 +6,15 @@ echo $$ > /var/run/myscript.pid
 function sigterm_handler()
 {
 	echo "I hate the kill command"
-
+	rm -f /var/run/myscript.pid
+	
 	exit 0
+}
+
+function sigquit_handler()
+{
+    rm -f /var/run/myscript.pid
+    exit 0
 }
 
 function sigint_handler()
@@ -17,6 +24,7 @@ function sigint_handler()
 
 trap sigterm_handler SIGTERM
 trap sigint_handler SIGINT
+trap sigquit_handler SIGQUIT
 
 while (true);
 do
